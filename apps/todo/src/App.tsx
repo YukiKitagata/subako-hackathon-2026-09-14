@@ -10,11 +10,11 @@ import "./session.css";
 //    session.ts は最初から置いてあります。先に npm install を済ませてください。
 //    session.css はサイドバーの枠に使うので、すでに上でimportしています。
 // ──────────────────────────────────────────────────────────────
-// import { z } from "zod";
-// import { SubakoSessionClient } from "@subako-ai/sdk";
-// import { SubakoProvider, useSession, useSessionState, useTool, useToolClient } from "@subako-ai/react";
-// import { SubakoChat } from "@subako-ai/assistant-ui";
-// import { fetchSessionToken, useSessionId } from "./session";
+import { z } from "zod";
+import { SubakoSessionClient } from "@subako-ai/sdk";
+import { SubakoProvider, useSession, useSessionState, useTool, useToolClient } from "@subako-ai/react";
+import { SubakoChat } from "@subako-ai/assistant-ui";
+import { fetchSessionToken, useSessionId } from "./session";
 
 const initialItems: Todo[] = parseTodos(data);
 const storageKey = "hackathon:todo";
@@ -23,67 +23,76 @@ const storageKey = "hackathon:todo";
 // TODO(2) 会話につなぐクライアントを用意する
 //    APIキーは持ちません。会話ごとのtokenを開発サーバーから受け取ります。
 // ──────────────────────────────────────────────────────────────
-// const baseUrl = import.meta.env.VITE_SUBAKO_BASE_URL || "https://api.us.cloud.subako.ai";
-// const sessionStorageKey = `hackathon:session:todo:${baseUrl}`;
-// const subako = new SubakoSessionClient({ baseUrl, getToken: fetchSessionToken });
+const baseUrl = import.meta.env.VITE_SUBAKO_BASE_URL || "https://api.us.cloud.subako.ai";
+const sessionStorageKey = `hackathon:session:todo:${baseUrl}`;
+const subako = new SubakoSessionClient({ baseUrl, getToken: fetchSessionToken });
 
 // ──────────────────────────────────────────────────────────────
 // TODO(3) 会話を担当するコンポーネントを追加する
 //    execute の中身は、フォームが使っている add() をそのまま呼ぶだけです。
 // ──────────────────────────────────────────────────────────────
-// function TodoAssistant({ getItems, add, complete, sessionId, creating, error, onNew }: {
-//   getItems: () => Todo[];
-//   add: (title: string) => Todo;
-//   complete: (id: string, done: boolean) => Todo;
-//   sessionId: string;
-//   creating: boolean;
-//   error: string;
-//   onNew: () => void;
-// }) {
-//   const session = useSession(sessionId);
-//   const client = useToolClient(session, "todo");
-//   const state = useSessionState(session);
-//   const running = state?.isRunning && state.status !== "failed";
-//   const connecting = !state || state.status === "connecting" || state.status === "reconnecting";
-//
-//   useTool(client, "list_todos", {
-//     description: "現在のTODOを取得する。",
-//     schema: z.object({}).strict(),
-//     execute: () => JSON.stringify(getItems()),
-//   });
-//
-//   useTool(client, "add_todo", {
-//     description: "TODOを1件追加する。",
-//     schema: z.object({ title: z.string().max(300).trim().min(1) }).strict(),
-//     execute: ({ title }) => JSON.stringify(add(title)),
-//   });
-//
-//   // TODO(4) ここに完了ツールを足す。ここだけ雛形がありません。
-//   //   ツール名  set_todo_done
-//   //   説明      一覧で取得したidのTODOを完了・未完了にする。
-//   //   引数      id: string / done: boolean
-//   //   execute   complete(id, done) を呼び、JSON.stringify で返す
-//
-//   return (
-//     <div className="session-conversation" aria-busy={creating}>
-//       <div className="session-toolbar">
-//         <button
-//           type="button"
-//           disabled={creating || running || connecting}
-//           onClick={onNew}
-//           title="会話を新しくします。TODOのデータは引き継がれます。"
-//         >
-//           {creating ? "作成中…" : "＋ 新しいセッション"}
-//         </button>
-//         {running && <span>応答後、または停止後に切り替えられます。</span>}
-//         {error && <p className="session-error" role="alert">{error}</p>}
-//       </div>
-//       <div className="session-chat" inert={creating}>
-//         <SubakoChat session={session} />
-//       </div>
-//     </div>
-//   );
-// }
+function TodoAssistant({ getItems, add, complete, sessionId, creating, error, onNew }: {
+  getItems: () => Todo[];
+  add: (title: string) => Todo;
+  complete: (id: string, done: boolean) => Todo;
+  sessionId: string;
+  creating: boolean;
+  error: string;
+  onNew: () => void;
+}) {
+  const session = useSession(sessionId);
+  const client = useToolClient(session, "todo");
+  const state = useSessionState(session);
+  const running = state?.isRunning && state.status !== "failed";
+  const connecting = !state || state.status === "connecting" || state.status === "reconnecting";
+
+  useTool(client, "list_todos", {
+    description: "現在のTODOを取得する。",
+    schema: z.object({}).strict(),
+    execute: () => JSON.stringify(getItems()),
+  });
+
+  useTool(client, "add_todo", {
+    description: "TODOを1件追加する。",
+    schema: z.object({ title: z.string().max(300).trim().min(1) }).strict(),
+    execute: ({ title }) => JSON.stringify(add(title)),
+  });
+
+  // TODO(4) ここに完了ツールを足す。ここだけ雛形がありません。
+  //   ツール名  set_todo_done
+  //   説明      一覧で取得したidのTODOを完了・未完了にする。
+  //   引数      id: string / done: boolean
+  //   execute   complete(id, done) を呼び、JSON.stringify で返す
+  useTool(client, 'set_todo_done', {
+     description: '一覧で取得したidのTODOを完了・未完了にする。',
+    schema: z.object({
+      id: z.string(),
+      done: z.boolean(),
+    }).strict(),
+    execute: ({ id, done }) =>
+      JSON.stringify(complete(id, done)),
+  })
+
+  return (
+    <div className="session-conversation" aria-busy={creating}>
+      <div className="session-toolbar">
+        <button
+          type="button"
+          disabled={creating || running || connecting}
+          onClick={onNew}
+          title="会話を新しくします。TODOのデータは引き継がれます。"
+        >
+          {creating ? "作成中…" : "＋ 新しいセッション"}
+        </button>
+        {running && <span>応答後、または停止後に切り替えられます。</span>}
+        {error && <p className="session-error" role="alert">{error}</p>}
+      </div>
+      <div className="session-chat" inert={creating}>
+        <SubakoChat session={session} />
+      </div>
+    </div>
+  );
+}
 
 export default function App() {
   const [initial] = useState(() => {
@@ -105,7 +114,7 @@ export default function App() {
   //    保存済みの会話があれば続きから、無ければ新しく作ります。
   //    startNew は会話だけを作り直し、TODOは残します。
   // ──────────────────────────────────────────────────────────────
-  // const { sessionId, creating, error: sessionError, startNew } = useSessionId(sessionStorageKey);
+  const { sessionId, creating, error: sessionError, startNew } = useSessionId(sessionStorageKey);
   const active = items.filter((item) => !item.done).length;
   const visible = items.filter(
     (item) => filter === "all" || (filter === "done" ? item.done : !item.done),
@@ -276,9 +285,7 @@ export default function App() {
           <p>会話しながら、アプリを操作できます。</p>
         </header>
         <div className="session-content">
-          <p>ここに会話が入ります。</p>
           {/* TODO(6) 上の <p> を消し、下の JSX コメントを解除します。 */}
-          {/*
             {sessionId ? (
               <SubakoProvider client={subako}>
                 <TodoAssistant
@@ -302,7 +309,6 @@ export default function App() {
                 {sessionError && <p className="session-error" role="alert">{sessionError}</p>}
               </div>
             )}
-          */}
         </div>
       </aside>
     </div>
