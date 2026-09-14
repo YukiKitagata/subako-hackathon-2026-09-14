@@ -2,6 +2,8 @@ import { fileURLToPath } from "node:url";
 import { defineConfig, loadEnv } from "vite";
 import react from "@vitejs/plugin-react";
 import { subakoDevApi } from "../../scripts/subako-dev-api.ts";
+import { youtubeDevApi } from "./youtube-dev-api.ts";
+import { osmDevApi } from "./osm-dev-api.ts";
 
 const envDir = fileURLToPath(new URL("../../", import.meta.url));
 const codespace = process.env.CODESPACE_NAME;
@@ -9,7 +11,7 @@ const domain = process.env.GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN;
 const host = codespace && domain ? `${codespace}-5173.${domain}` : undefined;
 
 export default defineConfig(({ mode }) => {
-  const env = loadEnv(mode, envDir, ["SUBAKO_", "VITE_SUBAKO_"]);
+  const env = loadEnv(mode, envDir, ["SUBAKO_", "VITE_SUBAKO_", "YOUTUBE_"]);
   return {
     plugins: [
       react(),
@@ -18,8 +20,12 @@ export default defineConfig(({ mode }) => {
         apiKey: env.SUBAKO_API_KEY ?? "",
         agentId: env.SUBAKO_AGENT_TODO ?? "",
         baseUrl: env.VITE_SUBAKO_BASE_URL || "https://api.us.cloud.subako.ai",
-        title: "TODO・スタート",
+        title: "スキマ筋トレ",
       }),
+      // YouTubeのキーも開発サーバーだけが持ち、ブラウザーは /__youtube/search で検索します。
+      youtubeDevApi({ apiKey: env.YOUTUBE_API_KEY ?? "" }),
+      // 保存済みのジム候補を返し、徒歩経路はOpenStreetMapのルーティングを利用規約に沿って開発サーバーから呼びます。
+      osmDevApi(),
     ],
     envDir,
     preview: { port: 5173, strictPort: true },

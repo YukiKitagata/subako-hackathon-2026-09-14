@@ -4,7 +4,7 @@ import test from "node:test";
 import { createElement, useEffect, useRef, useState } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import ts from "typescript";
-import type { Todo } from "../../apps/todo/src/model";
+import type { Todo } from "../../apps/todo-integrated/src/model";
 
 type Actions = {
   getItems: () => Todo[];
@@ -95,7 +95,7 @@ const fixture = (count: number): Todo[] => Array.from({ length: count }, (_, ind
   id: `todo-${index}`, title: `TODO ${index}`, done: false, metadata: {},
 }));
 
-for (const app of ["todo", "todo-integrated"]) {
+for (const app of ["todo-integrated"]) {
   const subject = await harness(app);
 
   test(`${app}: 連続追加の結果を即座に取得できる`, () => {

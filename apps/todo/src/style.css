@@ -229,6 +229,243 @@ input:focus-visible {
   color: #a14032;
   font-size: 13px;
 }
+.gym-panel {
+  margin-bottom: 24px;
+  border: 1px solid #dbded3;
+  border-radius: 14px;
+  background: #fffefa;
+  overflow: hidden;
+}
+.gym-panel-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 24px 14px;
+}
+.gym-panel-head h2 {
+  margin: 0;
+  font-size: 15px;
+}
+.gym-panel-head p {
+  margin: 4px 0 0;
+  font-size: 12px;
+  color: #77806d;
+}
+.gym-panel-head button {
+  border: 1px solid #cfd6c7;
+  border-radius: 20px;
+  background: #fffefa;
+  color: #57664d;
+  padding: 6px 12px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+.gym-map {
+  height: 280px;
+  border-top: 1px solid #e9eadf;
+}
+.gym-map-leaflet {
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background: #edf0e6;
+  font-family: inherit;
+}
+.workout-breakdown {
+  margin: -6px 0 0;
+  padding: 0 25px 14px;
+  font-size: 11px;
+  color: #77806d;
+}
+.workout-detail {
+  flex-basis: 100%;
+  padding-left: 31px;
+}
+.todo-list li.done .workout-detail {
+  opacity: 0.5;
+}
+.workout-targets {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 10px;
+  margin: 0 0 12px;
+  font-size: 12px;
+  color: #465b39;
+}
+.workout-muscle {
+  border-radius: 4px;
+  background: #eff3e7;
+  padding: 2px 8px;
+  font-weight: 600;
+  color: #344d33;
+}
+.workout-category {
+  margin-left: auto;
+  font-size: 11px;
+  color: #8a8f80;
+}
+.workout-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin: 0 0 12px;
+}
+.workout-stats > div {
+  padding: 0 12px;
+  border-left: 1px solid #e9eadf;
+}
+.workout-stats > div:first-child {
+  padding-left: 0;
+  border-left: 0;
+}
+.workout-stats dt {
+  font-size: 10px;
+  color: #8a8f80;
+}
+.workout-stats dd {
+  margin: 2px 0 0;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #344d33;
+  font-variant-numeric: tabular-nums;
+}
+.workout-stats dd small {
+  margin-left: 4px;
+  font-size: 10px;
+  font-weight: 400;
+  color: #8a8f80;
+}
+.workout-stats > .workout-stat-wide {
+  grid-column: span 2;
+}
+.workout-stats .workout-stat-wide dd {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.6;
+}
+.workout-timeline {
+  display: flex;
+  gap: 2px;
+  height: 18px;
+}
+.workout-timeline span {
+  display: grid;
+  place-items: center;
+  flex-basis: 0;
+  min-width: 16px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 600;
+  color: #fff;
+  font-variant-numeric: tabular-nums;
+}
+/* 色だけに頼らず、準備は点線・セットは塗り・インターバルは斜線で区別します。 */
+.workout-timeline .setup,
+.workout-legend .setup::before {
+  border: 1px dashed #aab39c;
+  background: #fffefa;
+}
+.workout-timeline .set,
+.workout-legend .set::before {
+  background: #607e46;
+}
+.workout-timeline .rest,
+.workout-legend .rest::before {
+  background: repeating-linear-gradient(135deg, #d4ddc6 0 3px, #f1f4ec 3px 6px);
+}
+.workout-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 14px;
+  margin: 6px 0 0;
+  font-size: 11px;
+  color: #57664d;
+}
+.workout-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+.workout-legend span::before {
+  content: "";
+  box-sizing: border-box;
+  width: 14px;
+  height: 10px;
+  border-radius: 2px;
+}
+.todo-list li:has(> .workout-video-toggle) {
+  flex-wrap: wrap;
+}
+.todo-list li > .workout-video-toggle {
+  margin-left: auto;
+  border: 1px solid #cfd6c7;
+  border-radius: 20px;
+  padding: 4px 10px;
+  color: #57664d;
+  font-size: 11px;
+  white-space: nowrap;
+}
+.workout-videos,
+.workout-videos-status {
+  flex-basis: 100%;
+  margin: 0;
+}
+.workout-videos-status {
+  font-size: 12px;
+  color: #8a8f80;
+}
+.workout-videos iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  border-radius: 8px;
+  background: #000;
+}
+.workout-videos ul {
+  display: grid;
+  gap: 6px;
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+}
+.workout-videos li {
+  display: block;
+  padding: 0;
+  border: 0;
+}
+.workout-videos li > button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 6px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: none;
+  color: #282a25;
+  font-size: 12px;
+  text-align: left;
+}
+.workout-videos li > button[aria-pressed="true"] {
+  border-color: #cfd6c7;
+  background: #f6f7f1;
+}
+.workout-videos img {
+  flex-shrink: 0;
+  width: 96px;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.workout-videos small {
+  display: block;
+  margin-top: 2px;
+  font-size: 11px;
+  color: #8a8f80;
+}
 .sr-only {
   position: absolute;
   width: 1px;
@@ -247,12 +484,26 @@ input:focus-visible {
   .todo-brand span {
     display: none;
   }
-  .todo-add {
+  .workout-detail {
+    padding-left: 0;
+  }
+  .gym-panel-head {
+    padding: 14px 16px;
+  }
+  .gym-map {
+    height: 240px;
+  }
+  .workout-breakdown {
     padding-left: 16px;
     padding-right: 16px;
   }
-  .todo-add button {
-    padding: 0 12px;
+  .workout-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 10px;
+  }
+  .workout-stats > div:nth-child(odd) {
+    padding-left: 0;
+    border-left: 0;
   }
   .todo-list {
     padding: 0 16px;

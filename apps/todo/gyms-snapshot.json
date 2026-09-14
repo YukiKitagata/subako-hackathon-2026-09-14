@@ -1,0 +1,52 @@
+{
+  "source": "© OpenStreetMap contributors（Overpass API: overpass-api.de）",
+  "license": "ODbL 1.0 https://opendatacommons.org/licenses/odbl/1-0/",
+  "fetchedAt": "2026-09-14T07:47:21Z",
+  "query": "[out:json][timeout:25];nwr(around:3000,35.658,139.7016)[\"brand:wikidata\"=\"Q4778364\"];out center tags 3;",
+  "center": { "lat": 35.658, "lon": 139.7016 },
+  "elements": [
+    {
+      "type": "node",
+      "id": 10681112121,
+      "lat": 35.6738033,
+      "lon": 139.6866647,
+      "tags": {
+        "addr:block_number": "49",
+        "addr:city": "渋谷区",
+        "addr:floor": "2F",
+        "addr:housenumber": "25",
+        "addr:neighbourhood": "元代々木町",
+        "addr:postcode": "151-0062",
+        "addr:province": "東京都",
+        "brand": "エニタイムフィットネス",
+        "brand:wikidata": "Q4778364",
+        "leisure": "fitness_centre",
+        "name": "エニタイムフィットネス",
+        "name:ja": "エニタイムフィットネス",
+        "opening_hours": "24/7",
+        "website": "https://www.anytimefitness.co.jp/yoyogi/"
+      }
+    },
+    {
+      "type": "node",
+      "id": 12452359656,
+      "lat": 35.6567925,
+      "lon": 139.7019901,
+      "tags": {
+        "addr:block_number": "1",
+        "addr:city": "渋谷区",
+        "addr:housenumber": "4",
+        "addr:neighbourhood": "桜丘町",
+        "addr:postcode": "150-0031",
+        "addr:province": "東京都",
+        "brand": "エニタイムフィットネス",
+        "brand:wikidata": "Q4778364",
+        "leisure": "fitness_centre",
+        "name": "エニタイムフィットネス",
+        "name:ja": "エニタイムフィットネス",
+        "opening_hours": "Mo-Su 10:00-19:00",
+        "website": "https://www.anytimefitness.co.jp/shibuya/"
+      }
+    }
+  ]
+}

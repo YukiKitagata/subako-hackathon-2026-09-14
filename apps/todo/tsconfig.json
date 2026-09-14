@@ -2,6 +2,10 @@
   "extends": "../../tsconfig.base.json",
   "include": [
     "src",
-    "vite.config.ts"
+    "vite.config.ts",
+    "youtube-dev-api.ts",
+    "youtube-dev-api.test.ts",
+    "osm-dev-api.ts",
+    "osm-dev-api.test.ts"
   ]
 }

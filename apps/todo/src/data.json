@@ -1,29 +1,25 @@
 [
-  {
-    "id": "todo-1",
-    "title": "資料を確認する",
-    "done": true,
-    "metadata": {
-      "priority": 2,
-      "estimatedMinutes": 10
-    }
-  },
-  {
-    "id": "todo-2",
-    "title": "予定を整理する",
-    "done": false,
-    "metadata": {
-      "priority": 1,
-      "estimatedMinutes": 15
-    }
-  },
-  {
-    "id": "todo-3",
-    "title": "メモをまとめる",
-    "done": false,
-    "metadata": {
-      "priority": 3,
-      "estimatedMinutes": 5
-    }
-  }
+  { "id": "leg-press", "name": "レッグプレス", "category": "machine", "muscle": "脚", "targets": ["大腿四頭筋", "大臀筋"], "sets": 3, "repsMin": 10, "repsMax": 12, "restSec": 90, "secPerRep": 3, "setupSec": 45, "metadata": { "level": "初級", "tips": "膝を伸ばし切らずに止める" } },
+  { "id": "leg-extension", "name": "レッグエクステンション", "category": "machine", "muscle": "脚", "targets": ["大腿四頭筋"], "sets": 3, "repsMin": 12, "repsMax": 15, "restSec": 60, "secPerRep": 3, "setupSec": 30, "metadata": { "level": "初級", "tips": "太もも前の単関節種目" } },
+  { "id": "leg-curl", "name": "レッグカール", "category": "machine", "muscle": "脚", "targets": ["ハムストリングス"], "sets": 3, "repsMin": 12, "repsMax": 15, "restSec": 60, "secPerRep": 3, "setupSec": 30, "metadata": { "level": "初級", "tips": "太もも裏の単関節種目" } },
+  { "id": "chest-press", "name": "チェストプレス", "category": "machine", "muscle": "胸", "targets": ["大胸筋", "上腕三頭筋"], "sets": 3, "repsMin": 8, "repsMax": 12, "restSec": 90, "secPerRep": 3, "setupSec": 30, "metadata": { "level": "初級", "tips": "肩をすくめず胸を張る" } },
+  { "id": "pec-fly", "name": "ペックフライ", "category": "machine", "muscle": "胸", "targets": ["大胸筋"], "sets": 3, "repsMin": 12, "repsMax": 15, "restSec": 60, "secPerRep": 3, "setupSec": 30, "metadata": { "level": "初級", "tips": "胸の単関節種目" } },
+  { "id": "lat-pulldown", "name": "ラットプルダウン", "category": "machine", "muscle": "背中", "targets": ["広背筋", "上腕二頭筋"], "sets": 3, "repsMin": 8, "repsMax": 12, "restSec": 90, "secPerRep": 3, "setupSec": 30, "metadata": { "level": "初級", "tips": "胸に向かって引き、反動を使わない" } },
+  { "id": "seated-row", "name": "シーテッドロー", "category": "machine", "muscle": "背中", "targets": ["広背筋", "僧帽筋"], "sets": 3, "repsMin": 10, "repsMax": 12, "restSec": 90, "secPerRep": 3, "setupSec": 30, "metadata": { "level": "初級", "tips": "肩甲骨を寄せて引く" } },
+  { "id": "shoulder-press-machine", "name": "ショルダープレスマシン", "category": "machine", "muscle": "肩", "targets": ["三角筋", "上腕三頭筋"], "sets": 3, "repsMin": 8, "repsMax": 12, "restSec": 90, "secPerRep": 3, "setupSec": 30, "metadata": { "level": "初級", "tips": "腰を反らせない" } },
+  { "id": "abdominal-crunch", "name": "アブドミナルクランチ", "category": "machine", "muscle": "腹", "targets": ["腹直筋"], "sets": 3, "repsMin": 15, "repsMax": 20, "restSec": 60, "secPerRep": 2, "setupSec": 30, "metadata": { "level": "初級", "tips": "腕ではなく腹筋で丸まる" } },
+  { "id": "barbell-squat", "name": "バーベルスクワット", "category": "free_weight", "muscle": "脚", "targets": ["大腿四頭筋", "大臀筋", "ハムストリングス"], "sets": 3, "repsMin": 5, "repsMax": 8, "restSec": 150, "secPerRep": 4, "setupSec": 120, "metadata": { "level": "中級", "tips": "ラック・セーフティバーと重量の準備に時間がかかる" } },
+  { "id": "bench-press", "name": "ベンチプレス", "category": "free_weight", "muscle": "胸", "targets": ["大胸筋", "三角筋前部", "上腕三頭筋"], "sets": 3, "repsMin": 6, "repsMax": 10, "restSec": 120, "secPerRep": 3, "setupSec": 90, "metadata": { "level": "中級", "tips": "高重量ではセーフティを設定する" } },
+  { "id": "deadlift", "name": "デッドリフト", "category": "free_weight", "muscle": "背中", "targets": ["脊柱起立筋", "大臀筋", "ハムストリングス"], "sets": 3, "repsMin": 5, "repsMax": 6, "restSec": 180, "secPerRep": 4, "setupSec": 120, "metadata": { "level": "上級", "tips": "腰が丸まるなら中止する。初心者には勧めない" } },
+  { "id": "dumbbell-shoulder-press", "name": "ダンベルショルダープレス", "category": "free_weight", "muscle": "肩", "targets": ["三角筋", "上腕三頭筋"], "sets": 3, "repsMin": 8, "repsMax": 12, "restSec": 90, "secPerRep": 3, "setupSec": 45, "metadata": { "level": "初級", "tips": "座って行うと腰への負担が少ない" } },
+  { "id": "dumbbell-row", "name": "ダンベルロウ", "category": "free_weight", "muscle": "背中", "targets": ["広背筋", "僧帽筋", "上腕二頭筋"], "sets": 3, "repsMin": 10, "repsMax": 12, "restSec": 60, "secPerRep": 6, "setupSec": 45, "metadata": { "level": "初級", "tips": "左右それぞれ行う。1REPの秒数は左右の合計" } },
+  { "id": "dumbbell-lunge", "name": "ダンベルランジ", "category": "free_weight", "muscle": "脚", "targets": ["大腿四頭筋", "大臀筋"], "sets": 3, "repsMin": 10, "repsMax": 12, "restSec": 90, "secPerRep": 6, "setupSec": 45, "metadata": { "level": "中級", "tips": "左右交互に行う。1REPの秒数は左右の合計" } },
+  { "id": "dumbbell-curl", "name": "ダンベルカール", "category": "free_weight", "muscle": "腕", "targets": ["上腕二頭筋"], "sets": 3, "repsMin": 10, "repsMax": 12, "restSec": 60, "secPerRep": 3, "setupSec": 30, "metadata": { "level": "初級", "tips": "肘の位置を固定する" } },
+  { "id": "triceps-extension", "name": "トライセプスエクステンション", "category": "free_weight", "muscle": "腕", "targets": ["上腕三頭筋"], "sets": 3, "repsMin": 10, "repsMax": 12, "restSec": 60, "secPerRep": 3, "setupSec": 30, "metadata": { "level": "初級", "tips": "肘を開かず、頭の後ろへゆっくり下ろす" } },
+  { "id": "treadmill-walk", "name": "トレッドミル（傾斜ウォーク）", "category": "cardio", "muscle": "心肺", "targets": ["心肺機能", "大臀筋", "ふくらはぎ"], "minutesMin": 5, "minutesMax": 20, "setupSec": 30, "intensity": "ややきつい：会話はできるが息が弾む程度（時速5〜6km・傾斜5〜10%が目安）", "metadata": { "level": "初級", "tips": "手すりにつかまらずに歩く。膝や腰への負担が少ない" } },
+  { "id": "treadmill-jog", "name": "トレッドミル（ジョギング）", "category": "cardio", "muscle": "心肺", "targets": ["心肺機能", "大腿四頭筋", "ふくらはぎ"], "minutesMin": 5, "minutesMax": 20, "setupSec": 30, "intensity": "ややきつい〜きつい：短い言葉なら話せる程度（時速7〜9kmが目安）", "metadata": { "level": "中級", "tips": "最初の1〜2分は歩いて体を温める" } },
+  { "id": "exercise-bike", "name": "エアロバイク", "category": "cardio", "muscle": "心肺", "targets": ["心肺機能", "大腿四頭筋"], "minutesMin": 5, "minutesMax": 30, "setupSec": 30, "intensity": "ややきつい：ペダルに適度な重さを感じ、1分間60〜80回転が目安", "metadata": { "level": "初級", "tips": "サドルはペダルが一番下で膝が軽く曲がる高さにする。関節への負担が少ない" } },
+  { "id": "cross-trainer", "name": "クロストレーナー", "category": "cardio", "muscle": "心肺", "targets": ["心肺機能", "大臀筋", "広背筋"], "minutesMin": 5, "minutesMax": 20, "setupSec": 30, "intensity": "ややきつい：会話はできるが息が弾む程度", "metadata": { "level": "初級", "tips": "腕も押し引きして全身を使う。着地の衝撃がない" } },
+  { "id": "stair-climber", "name": "ステアクライマー", "category": "cardio", "muscle": "心肺", "targets": ["心肺機能", "大臀筋", "大腿四頭筋"], "minutesMin": 5, "minutesMax": 15, "setupSec": 30, "intensity": "きつい：短時間でも心拍数が上がりやすい", "metadata": { "level": "中級", "tips": "手すりに体重を預けない" } },
+  { "id": "rowing-machine", "name": "ローイングマシン", "category": "cardio", "muscle": "心肺", "targets": ["心肺機能", "広背筋", "大腿四頭筋"], "minutesMin": 5, "minutesMax": 15, "setupSec": 45, "intensity": "ややきつい：1分間20〜24ストロークが目安", "metadata": { "level": "中級", "tips": "脚で押してから腕で引く。腰を丸めない" } }
 ]
