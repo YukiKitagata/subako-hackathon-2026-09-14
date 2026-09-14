@@ -1,0 +1,184 @@
+{
+  "checkedAt": "2026-09-13",
+  "purpose": "渋谷周辺のハッカソン用店舗データ。実店舗の紹介情報とデモ専用の仮定を混同しない。",
+  "usageNotes": [
+    "metadata はカード表示を省略できる補助情報であり、機密情報ではない。ブラウザーに含めた情報は閲覧できる。",
+    "営業時間・混雑・現在の在庫・商品価格・徒歩所要時間は収録していない。",
+    "各特徴の情報時点は metadata.sourceDate を参照。確認日は現況の実地調査日ではない。",
+    "経路は座標間の直線から徒歩ルートを捏造しない。ナビゲーションを行う場合は経路サービスまたは地図アプリを利用する。"
+  ],
+  "items": [
+    {
+      "id": "about-life-dogenzaka",
+      "name": "ABOUT LIFE COFFEE BREWERS 道玄坂店",
+      "address": "東京都渋谷区道玄坂1-19-8",
+      "latitude": 35.6567022,
+      "longitude": 139.6958093,
+      "officialUrl": "https://onibuscoffee.com/pages/locations/dogenzaka",
+      "officialMapUrl": "https://maps.app.goo.gl/eUrRpwcyAm9WZPnJ6",
+      "description": "道玄坂にあるコンパクトなコーヒースタンド。",
+      "metadata": {
+        "area": "道玄坂",
+        "style": "コーヒースタンド",
+        "features": [
+          "店前のベンチ",
+          "複数ロースターのコーヒーを紹介"
+        ],
+        "sourceDate": "2022-10-27",
+        "sourceUrl": "https://onibuscoffee.com/blogs/news/117",
+        "note": "特徴は公式の店舗紹介記事に基づく。現在の取扱豆・混雑・営業時間は未確認。"
+      },
+      "checkedAt": "2026-09-13",
+      "coordinateSource": {
+        "method": "公式店舗ページのGoogle Mapsリンクを展開し、店舗ピンの !3d / !4d を取得。@ 以降の地図表示中心は使用しない。",
+        "url": "https://maps.app.goo.gl/eUrRpwcyAm9WZPnJ6"
+      }
+    },
+    {
+      "id": "about-life-shibuya-1chome",
+      "name": "ABOUT LIFE COFFEE BREWERS 渋谷一丁目店",
+      "address": "東京都渋谷区渋谷1-17-1 all day place 1階",
+      "latitude": 35.6615004,
+      "longitude": 139.7031452,
+      "officialUrl": "https://onibuscoffee.com/pages/locations/shibuya1st",
+      "officialMapUrl": "https://maps.app.goo.gl/Jhz5fzU58T48XUip9",
+      "description": "ホテル all day place の1階にあるコーヒーショップ。",
+      "metadata": {
+        "area": "渋谷一丁目",
+        "style": "ホテル1階のカフェ",
+        "features": [
+          "屋外席",
+          "フードとデザート",
+          "ゲストロースターのシングルオリジン"
+        ],
+        "sourceDate": "2022-10-27",
+        "sourceUrl": "https://onibuscoffee.com/blogs/news/117",
+        "note": "特徴は公式の店舗紹介記事に基づく。現在のメニュー・座席の利用可否は未確認。"
+      },
+      "checkedAt": "2026-09-13",
+      "coordinateSource": {
+        "method": "公式店舗ページのGoogle Mapsリンクを展開し、店舗ピンの !3d / !4d を取得。@ 以降の地図表示中心は使用しない。",
+        "url": "https://maps.app.goo.gl/Jhz5fzU58T48XUip9"
+      }
+    },
+    {
+      "id": "white-glass-shibuya",
+      "name": "WHITE GLASS COFFEE 渋谷店",
+      "address": "東京都渋谷区桜丘町23-18 ビジョナリーアーツ1F",
+      "latitude": 35.6558897,
+      "longitude": 139.6997508,
+      "officialUrl": "https://whiteglasscoffee.com/",
+      "officialMapUrl": "https://goo.gl/maps/QfHsr6K2t2J2",
+      "description": "桜丘町のロースタリーカフェ。",
+      "metadata": {
+        "area": "桜丘町",
+        "style": "ロースタリーカフェ",
+        "features": [
+          "緑を取り入れた空間",
+          "店舗で焙煎",
+          "パンとの組み合わせ"
+        ],
+        "sourceDate": "2019-01-15",
+        "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000015.000023432.html",
+        "note": "住所・特徴は運営会社の開業発表に基づく。現行公式サイトの地図リンクで店舗位置を照合。現行メニューは未確認。"
+      },
+      "checkedAt": "2026-09-13",
+      "coordinateSource": {
+        "method": "公式店舗ページのGoogle Mapsリンクを展開し、店舗ピンの !3d / !4d を取得。@ 以降の地図表示中心は使用しない。",
+        "url": "https://goo.gl/maps/QfHsr6K2t2J2"
+      }
+    },
+    {
+      "id": "rec-shibuya-higashi",
+      "name": "REC COFFEE 渋谷東店",
+      "address": "東京都渋谷区東1-4-1 尚豊ビル1F",
+      "latitude": 35.6571905,
+      "longitude": 139.7079508,
+      "officialUrl": "https://rec-coffee.com/pages/shibuyahigashi",
+      "officialMapUrl": "https://www.google.co.jp/maps/place/REC+COFFEE+%7C+%E3%83%AC%E3%83%83%E3%82%AF%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E6%B8%8B%E8%B0%B7%E6%9D%B1%E5%BA%97/@35.6571905,139.7057621,17z/data=!3m2!4b1!5s0x60188b5c3db6f97b:0x78004104578dee04!4m5!3m4!1s0x60188bbe103bc775:0xa0b3e2111b0c1ddf!8m2!3d35.6571905!4d139.7079508?hl=ja&authuser=0",
+      "description": "カウンターとテラスのある渋谷東のコーヒーショップ。",
+      "metadata": {
+        "area": "渋谷東",
+        "style": "バールを思わせるカフェ",
+        "features": [
+          "カウンター席",
+          "テラス席",
+          "フルサービス"
+        ],
+        "featuredCoffee": {
+          "name": "リリーブレンド",
+          "origins": [
+            "エチオピア",
+            "グアテマラ"
+          ],
+          "roast": "中深煎り",
+          "flavorNotes": [
+            "フローラル",
+            "黒糖のような甘さ"
+          ]
+        },
+        "sourceDate": "2023-11-03",
+        "sourceUrl": "https://rec-coffee.com/blogs/yomimono/shibuya-higashi",
+        "note": "ブレンドの説明は2023年公式記事時点。現在の提供・販売・在庫・価格は未確認。"
+      },
+      "checkedAt": "2026-09-13",
+      "coordinateSource": {
+        "method": "公式店舗ページのGoogle Mapsリンクを展開し、店舗ピンの !3d / !4d を取得。@ 以降の地図表示中心は使用しない。",
+        "url": "https://www.google.co.jp/maps/place/REC+COFFEE+%7C+%E3%83%AC%E3%83%83%E3%82%AF%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E6%B8%8B%E8%B0%B7%E6%9D%B1%E5%BA%97/@35.6571905,139.7057621,17z/data=!3m2!4b1!5s0x60188b5c3db6f97b:0x78004104578dee04!4m5!3m4!1s0x60188bbe103bc775:0xa0b3e2111b0c1ddf!8m2!3d35.6571905!4d139.7079508?hl=ja&authuser=0"
+      }
+    },
+    {
+      "id": "blue-bottle-shibuya",
+      "name": "ブルーボトルコーヒー 渋谷カフェ",
+      "address": "東京都渋谷区神南1-7-3 渋谷区立北谷公園内",
+      "latitude": 35.6640789,
+      "longitude": 139.6995956,
+      "officialUrl": "https://store.bluebottlecoffee.jp/pages/shibuya",
+      "officialMapUrl": "https://goo.gl/maps/Qzrr6vPDgnUaipHu6",
+      "description": "北谷公園内にある2階建てのカフェ。",
+      "metadata": {
+        "area": "神南・北谷公園",
+        "style": "公園内のカフェ",
+        "features": [
+          "1階と2階の座席",
+          "屋外ベンチ",
+          "Wi-Fi"
+        ],
+        "sourceDate": null,
+        "sourceUrl": "https://store.bluebottlecoffee.jp/pages/shibuya",
+        "note": "公式店舗ページを2026-09-13に確認。営業時間・席の空き状況は収録していない。"
+      },
+      "checkedAt": "2026-09-13",
+      "coordinateSource": {
+        "method": "公式店舗ページのGoogle Mapsリンクを展開し、店舗ピンの !3d / !4d を取得。@ 以降の地図表示中心は使用しない。",
+        "url": "https://goo.gl/maps/Qzrr6vPDgnUaipHu6"
+      }
+    },
+    {
+      "id": "sarutahiko-shibuya-new-south-short",
+      "name": "猿田彦珈琲 JR渋谷新南改札 Short",
+      "address": "東京都渋谷区渋谷3-29-2 JR渋谷新南ビル",
+      "latitude": 35.657624,
+      "longitude": 139.7018464,
+      "officialUrl": "https://brand.sarutahiko.jp/shop/shibuya_new_south_gate_short",
+      "officialMapUrl": "https://maps.app.goo.gl/qabFCAL4Vsc9f7YJ7",
+      "description": "新南改札のそばで短時間の利用に対応するコーヒースタンド。",
+      "metadata": {
+        "area": "新南改札",
+        "style": "クイック利用のカフェスタンド",
+        "features": [
+          "短時間の利用向け",
+          "コーヒーとサンドイッチ"
+        ],
+        "sourceDate": "2026-05-26",
+        "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000203.000027005.html",
+        "note": "特徴は運営会社の開業発表に基づく。近接するTall店とは別店舗。現在の提供・価格は未確認。"
+      },
+      "checkedAt": "2026-09-13",
+      "coordinateSource": {
+        "method": "公式店舗ページのGoogle Mapsリンクを展開し、店舗ピンの !3d / !4d を取得。@ 以降の地図表示中心は使用しない。",
+        "url": "https://maps.app.goo.gl/qabFCAL4Vsc9f7YJ7"
+      }
+    }
+  ]
+}

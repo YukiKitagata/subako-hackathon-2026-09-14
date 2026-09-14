@@ -1,0 +1,54 @@
+{
+  "name": "Subako ハッカソン",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-22-bookworm",
+  "remoteUser": "node",
+  "remoteEnv": {
+    "PATH": "/home/node/.local/bin:${containerEnv:PATH}"
+  },
+  "forwardPorts": [
+    5173,
+    5174,
+    5175,
+    5176,
+    5177,
+    5178
+  ],
+  "portsAttributes": {
+    "5173": {
+      "label": "todo",
+      "onAutoForward": "notify"
+    },
+    "5174": {
+      "label": "todo-integrated",
+      "onAutoForward": "notify"
+    },
+    "5175": {
+      "label": "map",
+      "onAutoForward": "notify"
+    },
+    "5176": {
+      "label": "map-coffee",
+      "onAutoForward": "notify"
+    },
+    "5177": {
+      "label": "ec",
+      "onAutoForward": "notify"
+    },
+    "5178": {
+      "label": "ec-coffee",
+      "onAutoForward": "notify"
+    }
+  },
+  "postCreateCommand": "bash .devcontainer/post-create.sh",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint"
+      ],
+      "settings": {
+        "editor.tabSize": 2,
+        "files.eol": "\n"
+      }
+    }
+  }
+}

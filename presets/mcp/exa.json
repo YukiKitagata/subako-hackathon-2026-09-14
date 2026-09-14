@@ -1,0 +1,7 @@
+[
+  {
+    "name": "web-search",
+    "url": "https://mcp.exa.ai/mcp?tools=web_search_exa",
+    "default_policy": "allow"
+  }
+]

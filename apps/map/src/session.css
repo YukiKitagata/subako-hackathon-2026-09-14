@@ -1,0 +1,85 @@
+/**
+ * 会話のサイドバーと吹き出しのCSS。App.tsx の 手順1 でimportします。
+ * 中身を読まなくてもハンズオンは進みます。完成例と同じ内容です。
+ */
+.app-layout.has-session { grid-template-columns: minmax(0, 1fr) 360px; }
+.session-sidebar {
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  background: #fffefa;
+  color: #283b31;
+  border-left: 1px solid #d9dfd7;
+  font-family: system-ui, sans-serif;
+}
+.session-sidebar > header {
+  flex-shrink: 0;
+  padding: 22px 22px 18px;
+  border-bottom: 1px solid #e5e8df;
+}
+.session-sidebar > header > span { font-size: 9px; letter-spacing: 1.8px; color: #7e8a76; }
+.session-sidebar h2 { margin: 10px 0 6px; font-size: 16px; line-height: 1.5; font-weight: 600; }
+.session-sidebar > header p { margin: 0; font-size: 11px; line-height: 1.8; color: #7b8374; }
+.session-content, .session-conversation, .session-chat {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+.session-content { overflow: auto; overscroll-behavior: contain; }
+.session-content > p { margin: 22px; font-size: 13px; line-height: 1.9; }
+.session-notice { padding: 12px 16px; font: 12px/1.7 system-ui, sans-serif; }
+.session-error { margin: 0; color: #a14032; overflow-wrap: anywhere; }
+.session-toolbar {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+  padding: 10px 16px;
+  border-bottom: 1px solid #e1e5da;
+  font: 12px/1.6 system-ui, sans-serif;
+}
+.session-toolbar button {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 10px;
+  border: 1px solid #cbd5c6;
+  border-radius: 6px;
+  background: #fffefa;
+  color: #345b46;
+  font: inherit;
+  cursor: pointer;
+}
+.session-toolbar button:hover:not(:disabled) { background: #f0f3eb; }
+.session-toolbar button:focus-visible { outline: 2px solid #345b46; outline-offset: 3px; }
+.session-toolbar button:disabled { opacity: 0.55; cursor: default; }
+.session-toolbar > span { color: #788173; font-size: 11px; }
+.tool-status { display: block; padding: 4px 0; font: 12px/1.6 system-ui, sans-serif; color: #676155; }
+.session-sidebar .subako-chat {
+  flex: 1;
+  min-height: 0;
+  height: auto;
+  --subako-bg: #fffefa;
+  --subako-fg: #283b31;
+  --subako-muted: #788173;
+  --subako-accent: #345b46;
+  --subako-accent-fg: #ffffff;
+  --subako-border: #e1e5da;
+  --subako-surface: #f0f3eb;
+  --subako-error: #a14032;
+  color-scheme: light;
+  font: 13px/1.8 system-ui, sans-serif;
+}
+.subako-tool-args { display: none; }
+.session-sidebar .subako-composer { padding: 12px; gap: 8px; }
+.session-sidebar .subako-input { min-width: 0; min-height: 40px; max-height: 120px; }
+@media (max-width: 760px) {
+  .app-layout.has-session { grid-template-columns: minmax(0, 1fr); grid-template-rows: minmax(0, 3fr) minmax(0, 2fr); }
+  .session-sidebar { border-left: 0; border-top: 1px solid #d9dfd7; }
+  .session-sidebar > header { padding: 10px 16px; }
+  .session-sidebar h2 { margin: 0; font-size: 13px; }
+  .session-sidebar > header > span, .session-sidebar > header p { display: none; }
+}

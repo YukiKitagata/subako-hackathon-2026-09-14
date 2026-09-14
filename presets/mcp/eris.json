@@ -1,0 +1,13 @@
+[
+  {
+    "name": "weather",
+    "url": "https://weather-api.madadipouya.com/mcp",
+    "default_policy": "deny",
+    "tools": [
+      {
+        "name": "get_current_weather_by_latitude_and_longitude",
+        "policy": "allow"
+      }
+    ]
+  }
+]

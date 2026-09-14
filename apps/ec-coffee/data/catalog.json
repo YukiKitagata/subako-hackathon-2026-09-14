@@ -1,0 +1,318 @@
+{
+  "version": 1,
+  "title": "自分だけの、コーヒーセット。",
+  "description": "渋谷の街をイメージした10種類から。今日の気分に合わせて、少しずつ選んでみませんか。",
+  "items": [
+    {
+      "id": "dogenzaka-daybreak",
+      "name": "道玄坂 デイブレイク",
+      "description": "にぎやかな街の朝に。毎日手に取りたくなる定番の一袋。",
+      "price": 680,
+      "unit": "100g",
+      "stock": 12,
+      "tags": [
+        "深煎り",
+        "豆のまま"
+      ],
+      "metadata": {
+        "origin": "ブラジル",
+        "flavorNotes": [
+          "ナッツ",
+          "ミルクチョコレート"
+        ],
+        "roast": "深煎り",
+        "acidity": 1,
+        "sweetness": 4,
+        "body": 4,
+        "scale": "acidity/sweetness/bodyは1（弱い）〜5（強い）の架空評価",
+        "pairings": [
+          "ミルク",
+          "トースト"
+        ],
+        "caffeine": "regular",
+        "inspiredByArea": "道玄坂",
+        "demo": true
+      }
+    },
+    {
+      "id": "jinnan-breeze",
+      "name": "神南 ブリーズ",
+      "description": "買い物の合間にひと息。気分を切り替える午後の一杯。",
+      "price": 880,
+      "unit": "100g",
+      "stock": 14,
+      "tags": [
+        "中煎り",
+        "豆のまま"
+      ],
+      "metadata": {
+        "origin": "コロンビア",
+        "flavorNotes": [
+          "キャラメル",
+          "オレンジ"
+        ],
+        "roast": "中煎り",
+        "acidity": 2,
+        "sweetness": 4,
+        "body": 3,
+        "scale": "acidity/sweetness/bodyは1（弱い）〜5（強い）の架空評価",
+        "pairings": [
+          "クッキー",
+          "ブラック"
+        ],
+        "caffeine": "regular",
+        "inspiredByArea": "神南",
+        "demo": true
+      }
+    },
+    {
+      "id": "sakuragaoka-soft",
+      "name": "桜丘 ソフトステップ",
+      "description": "坂道をゆっくり歩くように。肩の力を抜いて楽しむ日常の一袋。",
+      "price": 780,
+      "unit": "100g",
+      "stock": 16,
+      "tags": [
+        "中深煎り",
+        "豆のまま"
+      ],
+      "metadata": {
+        "origin": "グアテマラ",
+        "flavorNotes": [
+          "アーモンド",
+          "ダークチョコレート"
+        ],
+        "roast": "中深煎り",
+        "acidity": 2,
+        "sweetness": 4,
+        "body": 4,
+        "scale": "acidity/sweetness/bodyは1（弱い）〜5（強い）の架空評価",
+        "pairings": [
+          "ミルク",
+          "チーズケーキ"
+        ],
+        "caffeine": "regular",
+        "inspiredByArea": "桜丘",
+        "demo": true
+      }
+    },
+    {
+      "id": "udagawa-night",
+      "name": "宇田川 ミッドナイト",
+      "description": "音楽の余韻と一緒に。夜の読書にも寄り添う落ち着いた一袋。",
+      "price": 920,
+      "unit": "100g",
+      "stock": 18,
+      "tags": [
+        "深煎り",
+        "豆のまま"
+      ],
+      "metadata": {
+        "origin": "ブラジル・インドネシア",
+        "flavorNotes": [
+          "カカオ",
+          "スパイス"
+        ],
+        "roast": "深煎り",
+        "acidity": 1,
+        "sweetness": 3,
+        "body": 5,
+        "scale": "acidity/sweetness/bodyは1（弱い）〜5（強い）の架空評価",
+        "pairings": [
+          "ミルク",
+          "ブラウニー"
+        ],
+        "caffeine": "regular",
+        "inspiredByArea": "宇田川町",
+        "demo": true
+      }
+    },
+    {
+      "id": "jingumae-floral",
+      "name": "神宮前 フローラル",
+      "description": "いつもの道から少し寄り道。新しい好みに出会いたい日に。",
+      "price": 1050,
+      "unit": "100g",
+      "stock": 20,
+      "tags": [
+        "浅煎り",
+        "豆のまま"
+      ],
+      "metadata": {
+        "origin": "エチオピア",
+        "flavorNotes": [
+          "ジャスミン",
+          "ピーチ"
+        ],
+        "roast": "浅煎り",
+        "acidity": 4,
+        "sweetness": 4,
+        "body": 2,
+        "scale": "acidity/sweetness/bodyは1（弱い）〜5（強い）の架空評価",
+        "pairings": [
+          "ブラック",
+          "フルーツタルト"
+        ],
+        "caffeine": "regular",
+        "inspiredByArea": "神宮前",
+        "demo": true
+      }
+    },
+    {
+      "id": "miyashita-berry",
+      "name": "宮下 ベリーウォーク",
+      "description": "公園を歩く休日に。気分を明るくする小さな冒険。",
+      "price": 980,
+      "unit": "100g",
+      "stock": 22,
+      "tags": [
+        "中浅煎り",
+        "豆のまま"
+      ],
+      "metadata": {
+        "origin": "ケニア",
+        "flavorNotes": [
+          "カシス",
+          "グレープフルーツ"
+        ],
+        "roast": "中浅煎り",
+        "acidity": 4,
+        "sweetness": 3,
+        "body": 3,
+        "scale": "acidity/sweetness/bodyは1（弱い）〜5（強い）の架空評価",
+        "pairings": [
+          "アイス",
+          "チョコレート"
+        ],
+        "caffeine": "regular",
+        "inspiredByArea": "宮下",
+        "demo": true
+      }
+    },
+    {
+      "id": "shoto-sunday",
+      "name": "松濤 サンデー",
+      "description": "静かな住宅街の休日をイメージ。ゆっくり淹れたい一袋。",
+      "price": 850,
+      "unit": "100g",
+      "stock": 24,
+      "tags": [
+        "中煎り",
+        "豆のまま"
+      ],
+      "metadata": {
+        "origin": "コスタリカ",
+        "flavorNotes": [
+          "はちみつ",
+          "赤りんご"
+        ],
+        "roast": "中煎り",
+        "acidity": 3,
+        "sweetness": 5,
+        "body": 3,
+        "scale": "acidity/sweetness/bodyは1（弱い）〜5（強い）の架空評価",
+        "pairings": [
+          "ブラック",
+          "スコーン"
+        ],
+        "caffeine": "regular",
+        "inspiredByArea": "松濤",
+        "demo": true
+      }
+    },
+    {
+      "id": "aoyama-clear",
+      "name": "青山 クリアモーメント",
+      "description": "背筋を伸ばしたい朝に。丁寧な時間を楽しむための一袋。",
+      "price": 1100,
+      "unit": "100g",
+      "stock": 26,
+      "tags": [
+        "浅煎り",
+        "豆のまま"
+      ],
+      "metadata": {
+        "origin": "パナマ",
+        "flavorNotes": [
+          "紅茶",
+          "ジャスミン"
+        ],
+        "roast": "浅煎り",
+        "acidity": 4,
+        "sweetness": 3,
+        "body": 2,
+        "scale": "acidity/sweetness/bodyは1（弱い）〜5（強い）の架空評価",
+        "pairings": [
+          "ブラック",
+          "レモンケーキ"
+        ],
+        "caffeine": "regular",
+        "inspiredByArea": "青山",
+        "demo": true
+      }
+    },
+    {
+      "id": "ebisu-decaf",
+      "name": "恵比寿 イブニング",
+      "description": "一日の終わりに、自分だけのひと息。カフェインを控えたい方へ。",
+      "price": 950,
+      "unit": "100g",
+      "stock": 28,
+      "tags": [
+        "中煎り",
+        "デカフェ"
+      ],
+      "metadata": {
+        "origin": "コロンビア",
+        "flavorNotes": [
+          "チョコレート",
+          "焼きりんご"
+        ],
+        "roast": "中煎り",
+        "acidity": 2,
+        "sweetness": 4,
+        "body": 3,
+        "scale": "acidity/sweetness/bodyは1（弱い）〜5（強い）の架空評価",
+        "pairings": [
+          "夜",
+          "ミルク"
+        ],
+        "caffeine": "decaf",
+        "inspiredByArea": "恵比寿",
+        "demo": true
+      }
+    },
+    {
+      "id": "higashi-slow",
+      "name": "渋谷東 スローモーニング",
+      "description": "急がない朝のために。日々のリズムを整える落ち着いた一袋。",
+      "price": 720,
+      "unit": "100g",
+      "stock": 30,
+      "tags": [
+        "深煎り",
+        "豆のまま"
+      ],
+      "metadata": {
+        "origin": "インドネシア",
+        "flavorNotes": [
+          "ハーブ",
+          "カカオ",
+          "土の香り"
+        ],
+        "roast": "深煎り",
+        "acidity": 1,
+        "sweetness": 2,
+        "body": 5,
+        "scale": "acidity/sweetness/bodyは1（弱い）〜5（強い）の架空評価",
+        "pairings": [
+          "ミルク",
+          "バタークッキー"
+        ],
+        "caffeine": "regular",
+        "inspiredByArea": "渋谷東",
+        "demo": true
+      }
+    }
+  ]
+}

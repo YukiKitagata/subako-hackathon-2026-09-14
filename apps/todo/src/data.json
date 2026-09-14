@@ -1,0 +1,29 @@
+[
+  {
+    "id": "todo-1",
+    "title": "資料を確認する",
+    "done": true,
+    "metadata": {
+      "priority": 2,
+      "estimatedMinutes": 10
+    }
+  },
+  {
+    "id": "todo-2",
+    "title": "予定を整理する",
+    "done": false,
+    "metadata": {
+      "priority": 1,
+      "estimatedMinutes": 15
+    }
+  },
+  {
+    "id": "todo-3",
+    "title": "メモをまとめる",
+    "done": false,
+    "metadata": {
+      "priority": 3,
+      "estimatedMinutes": 5
+    }
+  }
+]

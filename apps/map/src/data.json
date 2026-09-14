@@ -1,0 +1,78 @@
+[
+  {
+    "id": "place-a",
+    "name": "地点A",
+    "description": "短時間で立ち寄るためのサンプル地点。",
+    "address": "デモ地点A（架空）",
+    "position": {
+      "lat": 35.6622,
+      "lng": 139.7008
+    },
+    "tags": [
+      "Aグループ",
+      "短時間"
+    ],
+    "metadata": {
+      "estimatedStayMinutes": 10,
+      "priority": 1,
+      "notes": "最初の候補として比較する"
+    }
+  },
+  {
+    "id": "place-b",
+    "name": "地点B",
+    "description": "少し時間をとって訪れるサンプル地点。",
+    "address": "デモ地点B（架空）",
+    "position": {
+      "lat": 35.6596,
+      "lng": 139.7055
+    },
+    "tags": [
+      "Bグループ",
+      "ゆっくり"
+    ],
+    "metadata": {
+      "estimatedStayMinutes": 30,
+      "priority": 2,
+      "notes": "時間に余裕がある場合の候補"
+    }
+  },
+  {
+    "id": "place-c",
+    "name": "地点C",
+    "description": "ほかの地点と組み合わせるサンプル地点。",
+    "address": "デモ地点C（架空）",
+    "position": {
+      "lat": 35.6548,
+      "lng": 139.7024
+    },
+    "tags": [
+      "Aグループ",
+      "短時間"
+    ],
+    "metadata": {
+      "estimatedStayMinutes": 15,
+      "priority": 2,
+      "notes": "地点Aと合わせて訪問順を試す"
+    }
+  },
+  {
+    "id": "place-d",
+    "name": "地点D",
+    "description": "訪問順の入れ替えを試すサンプル地点。",
+    "address": "デモ地点D（架空）",
+    "position": {
+      "lat": 35.6578,
+      "lng": 139.6969
+    },
+    "tags": [
+      "Bグループ",
+      "ゆっくり"
+    ],
+    "metadata": {
+      "estimatedStayMinutes": 20,
+      "priority": 3,
+      "notes": "別の組み合わせを比べる候補"
+    }
+  }
+]

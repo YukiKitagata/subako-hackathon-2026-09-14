@@ -1,0 +1,80 @@
+.app-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+}
+.app-panel {
+  position: relative;
+  min-width: 0;
+  min-height: 0;
+  isolation: isolate;
+  container: app-panel / inline-size;
+}
+.app-content {
+  height: 100%;
+  overflow: auto;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+}
+.app-dialog-host {
+  position: absolute;
+  inset: 0;
+  z-index: 1000;
+  pointer-events: none;
+}
+.dialog-overlay {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: #17251e66;
+  pointer-events: auto;
+  overflow: auto;
+  overscroll-behavior: contain;
+}
+.app-dialog {
+  box-sizing: border-box;
+  width: min(100%, 560px);
+  max-height: 100%;
+  overflow: auto;
+  overscroll-behavior: contain;
+  border: 1px solid #dce2d6;
+  border-radius: 16px;
+  background: #fffefa;
+  color: #283b31;
+  padding: 28px;
+  box-shadow: 0 24px 70px #14221933;
+  font: 14px/1.8 system-ui, sans-serif;
+}
+.dialog-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+.dialog-heading h2 {
+  margin: 0;
+  font-size: 21px;
+  line-height: 1.5;
+}
+.dialog-heading button {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border: 1px solid #dce2d6;
+  border-radius: 50%;
+  background: transparent;
+  color: inherit;
+  font: 22px/1 system-ui, sans-serif;
+  cursor: pointer;
+}
+@media (max-width: 760px) {
+  .dialog-overlay { padding: 12px; }
+  .app-dialog { padding: 20px; }
+}

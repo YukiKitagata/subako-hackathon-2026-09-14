@@ -1,0 +1,86 @@
+{
+  "version": 1,
+  "title": "わたしのセレクトショップ",
+  "description": "価格や特徴を比べて、自由に商品を組み合わせましょう。",
+  "items": [
+    {
+      "id": "item-a",
+      "name": "商品A",
+      "description": "軽くて持ち運びやすいサンプル商品。",
+      "price": 500,
+      "unit": "点",
+      "stock": 12,
+      "tags": [
+        "軽量",
+        "小型"
+      ],
+      "metadata": {
+        "material": "樹脂",
+        "weightGrams": 120,
+        "colors": [
+          "ホワイト",
+          "グレー"
+        ]
+      }
+    },
+    {
+      "id": "item-b",
+      "name": "商品B",
+      "description": "日常のいろいろな場面で使えるサンプル商品。",
+      "price": 1200,
+      "unit": "点",
+      "stock": 8,
+      "tags": [
+        "定番",
+        "中型"
+      ],
+      "metadata": {
+        "material": "アルミ",
+        "weightGrams": 350,
+        "colors": [
+          "シルバー",
+          "ブラック"
+        ]
+      }
+    },
+    {
+      "id": "item-c",
+      "name": "商品C",
+      "description": "サイズに余裕があるサンプル商品。",
+      "price": 2500,
+      "unit": "点",
+      "stock": 3,
+      "tags": [
+        "大型",
+        "丈夫"
+      ],
+      "metadata": {
+        "material": "スチール",
+        "weightGrams": 900,
+        "colors": [
+          "ブラック"
+        ]
+      }
+    },
+    {
+      "id": "item-d",
+      "name": "商品D",
+      "description": "在庫切れの表示を試せるサンプル商品。",
+      "price": 800,
+      "unit": "点",
+      "stock": 0,
+      "tags": [
+        "軽量",
+        "小型"
+      ],
+      "metadata": {
+        "material": "樹脂",
+        "weightGrams": 180,
+        "colors": [
+          "ブルー",
+          "ホワイト"
+        ]
+      }
+    }
+  ]
+}
